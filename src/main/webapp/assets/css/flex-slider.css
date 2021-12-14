@@ -279,3 +279,24 @@ html[xmlns] .flexslider .slides {
     right: 10px;
   }
 }
+.containerpprincipal{
+   border-: solid;
+   width:90%;border-top-color: color: #D35400;
+   margin: 150px auto;
+   padding: 5;	
+  }
+
+.imglogo{
+	margin-top: 4rem;
+	
+
+}
+
+.containerlogin{
+	border-style:solid;
+	width:30%;
+	margin: 67px auto;
+	border-style: solid #D35400;
+	padding: 1%;
+
+}

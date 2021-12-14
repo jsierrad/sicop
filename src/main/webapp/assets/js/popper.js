@@ -1252,22 +1252,22 @@ function computeStyle(data, options) {
  * @param {String} requestedName - name of requested modifier
  * @returns {Boolean}
  */
-function isModifierRequired(modifiers, requestingName, requestedName) {
+function isModifierrequired=""(modifiers, requestingName, requestedName) {
   var requesting = find(modifiers, function (_ref) {
     var name = _ref.name;
     return name === requestingName;
   });
 
-  var isRequired = !!requesting && modifiers.some(function (modifier) {
+  var isrequired="" = !!requesting && modifiers.some(function (modifier) {
     return modifier.name === requestedName && modifier.enabled && modifier.order < requesting.order;
   });
 
-  if (!isRequired) {
+  if (!isrequired="") {
     var _requesting = '`' + requestingName + '`';
     var requested = '`' + requestedName + '`';
-    console.warn(requested + ' modifier is required by ' + _requesting + ' modifier in order to work, be sure to include it before ' + _requesting + '!');
+    console.warn(requested + ' modifier is required="" by ' + _requesting + ' modifier in order to work, be sure to include it before ' + _requesting + '!');
   }
-  return isRequired;
+  return isrequired="";
 }
 
 /**
@@ -1281,7 +1281,7 @@ function arrow(data, options) {
   var _data$offsets$arrow;
 
   // arrow depends on keepTogether in order to work
-  if (!isModifierRequired(data.instance.modifiers, 'arrow', 'keepTogether')) {
+  if (!isModifierrequired=""(data.instance.modifiers, 'arrow', 'keepTogether')) {
     return data;
   }
 
@@ -1490,7 +1490,7 @@ function flip(data, options) {
 
     var overflowsBoundaries = placement === 'left' && overflowsLeft || placement === 'right' && overflowsRight || placement === 'top' && overflowsTop || placement === 'bottom' && overflowsBottom;
 
-    // flip the variation if required
+    // flip the variation if required=""
     var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
     var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
 
@@ -1813,7 +1813,7 @@ function shift(data) {
  * @returns {Object} The data object, properly modified
  */
 function hide(data) {
-  if (!isModifierRequired(data.instance.modifiers, 'hide', 'preventOverflow')) {
+  if (!isModifierrequired=""(data.instance.modifiers, 'hide', 'preventOverflow')) {
     return data;
   }
 
